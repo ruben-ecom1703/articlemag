@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Après 50 ans, le détail qui fait l'élégance — The 50 Club</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700&family=Italiana&family=Jost:wght@300;400;500&family=Newsreader:ital,opsz,wght@1,6..72,300;1,6..72,400&display=swap">
+<style>
+:root{
+  --ground:#FFFFFF;
+  --ink:#0C0C0C;
+  --grey:#8C8C8C;
+  --hair:#E4E4E4;
+  --plate:#EFEEEC;
+  --plate-dark:#2A2A2A;
+  --glacier:#5C8CAB;
+  --didone:'Italiana','Didot','Bodoni 72',Georgia,serif;
+  --italic:'Newsreader',Georgia,serif;
+  --sans:'Jost','Futura','Avenir Next',Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--sans);font-weight:400;font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
+p{margin:0}
+.label{font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:.3em;text-transform:uppercase}
+.narrow{max-width:560px;margin:0 auto;padding:0 24px;text-align:center}
+.bleed{max-width:1120px;margin:0 auto}
+a:focus-visible,input:focus-visible{outline:1px solid var(--ink);outline-offset:4px}
+
+/* masthead */
+.mast{text-align:center;padding:18px 24px 12px;border-bottom:1px solid var(--hair)}
+.mast .name{font-family:var(--didone);font-size:34px;letter-spacing:.32em;line-height:1;padding-left:.32em}
+.mast .issue{color:var(--grey);margin-top:10px;font-size:10px}
+
+/* opening */
+.open{padding:34px 0 26px}
+.open .label{color:var(--grey)}
+h1{font-family:var(--didone);font-weight:400;font-size:clamp(46px,12.5vw,104px);line-height:.98;letter-spacing:-.01em;margin:14px 0 16px;text-wrap:balance}
+h1 .fifty{font-family:'Bodoni Moda','Didot','Bodoni 72',Georgia,serif;font-weight:700;font-size:1.08em;letter-spacing:-.03em;text-decoration:underline;text-decoration-thickness:2px;text-decoration-color:var(--glacier);text-underline-offset:.1em;text-decoration-skip-ink:none}
+.mast .name b{font-family:'Bodoni Moda','Didot','Bodoni 72',Georgia,serif;font-weight:700;letter-spacing:.12em}
+.deck{font-family:var(--italic);font-style:italic;font-weight:300;font-size:clamp(21px,5vw,26px);line-height:1.35}
+.by{color:var(--grey);margin-top:16px;font-size:10px}
+
+/* plates (image placeholders) */
+.plate{position:relative;background:var(--plate);display:grid;place-content:center;text-align:center;gap:8px;padding:24px;color:var(--grey)}
+.plate .label{font-size:10px;color:var(--ink)}
+.plate small{font-size:12.5px;line-height:1.5;max-width:30ch;margin:0 auto;font-weight:300}
+.plate.dark{background:var(--plate-dark);color:#9A9A9A}
+.plate.dark .label{color:#F2F2F2}
+.cap{font-family:var(--italic);font-style:italic;font-weight:300;font-size:16px;color:var(--grey);text-align:center;padding:10px 24px 0}
+
+/* before / after */
+.ba{position:relative;aspect-ratio:4/5;overflow:hidden;--pos:50%;touch-action:pan-y;user-select:none}
+.ba{max-width:620px;margin:0 auto}
+.ba .layer{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 28%;display:block;pointer-events:none}
+.ba .plate{position:absolute;inset:0}
+.ba .after{clip-path:inset(0 0 0 var(--pos))}
+.ba .before small{margin-right:50%;padding-right:10px}
+.ba .after small{margin-left:50%;padding-left:10px}
+.ba .before .label{margin-right:50%;padding-right:10px}
+.ba .after .label{margin-left:50%;padding-left:10px}
+.ba .mark{position:absolute;bottom:18px;z-index:2;font-size:10px;color:#FFFFFF;mix-blend-mode:difference}
+.ba .mark.l{left:20px}.ba .mark.r{right:20px}
+.ba .line{position:absolute;top:0;bottom:0;left:var(--pos);width:1px;background:#FFFFFF;z-index:2;pointer-events:none}
+.ba .knob{position:absolute;top:50%;left:50%;width:46px;height:46px;margin:-23px 0 0 -23px;border:1px solid #FFFFFF;border-radius:50%;display:grid;place-content:center;color:#FFFFFF;font-family:var(--sans);font-size:14px;letter-spacing:.1em;backdrop-filter:blur(2px)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:3;margin:0}
+
+.intro{padding:28px 0 0}
+.intro p{font-weight:300;font-size:19px;line-height:1.65}
+.link{display:inline-block;margin-top:26px;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:3px}
+
+/* the pair */
+.pair{padding:56px 0 0}
+.pair .label{color:var(--grey)}
+.word{font-family:var(--didone);font-size:clamp(80px,24vw,200px);line-height:.9;letter-spacing:-.02em;margin:8px 0 4px}
+.word + .label{color:var(--ink)}
+.pair .plate{aspect-ratio:4/5;margin-top:44px}
+.pair .portrait{display:block;width:100%;max-width:620px;margin:24px auto 0;aspect-ratio:4/5;object-fit:cover;object-position:50% 35%}
+.specs{display:grid;gap:18px;padding:24px 24px 0;max-width:960px;margin:0 auto;text-align:center}
+@media (min-width:760px){.specs{grid-template-columns:repeat(3,1fr);gap:40px}}
+.specs .label{margin-bottom:4px}
+.specs p{font-family:var(--italic);font-style:italic;font-weight:300;font-size:19px;line-height:1.4}
+
+/* vote */
+.vote{padding:60px 0 0}
+.vote .label{color:var(--grey)}
+.vote h2{font-family:var(--italic);font-style:italic;font-weight:300;font-size:clamp(30px,8vw,48px);line-height:1.15;margin:8px 0 22px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:3px;max-width:820px;margin:0 auto}
+.duo .pick{position:relative;margin:0;aspect-ratio:3/4;overflow:hidden}
+.duo .pick img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
+.duo .pick .label{position:absolute;left:12px;top:12px;background:#FFFFFF;color:var(--ink);padding:4px 9px 4px 11px;font-size:10px}
+.duo .plate{aspect-ratio:3/4;padding:14px}
+.duo .plate small{font-size:11.5px}
+.scores{display:grid;grid-template-columns:1fr 1fr;gap:3px;text-align:center;padding-top:22px}
+.num{font-family:var(--didone);font-size:clamp(60px,17vw,128px);line-height:1;font-variant-numeric:tabular-nums}
+.num sup{font-size:.4em;vertical-align:top;position:relative;top:.35em;margin-left:2px}
+.scores .lose .num{color:#BDBDBD}
+.scores .win .num{color:var(--glacier)}
+.scores .label{margin-top:8px;font-size:10px}
+.scores .lose .label{color:var(--grey)}
+
+/* poll */
+.poll{max-width:560px;margin:18px auto 0;padding:22px 20px 18px;border:1px solid var(--ink);background:var(--ground)}
+@media (max-width:600px){.poll{margin-left:16px;margin-right:16px}}
+.poll-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.poll-head .label{font-size:10px}
+.poll-head .closed{color:var(--grey)}
+.opt{position:relative;display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;min-height:58px;margin:0 0 10px;padding:0 16px;border:1px solid var(--hair);background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:15px;text-align:left;cursor:pointer;overflow:hidden}
+.opt .fill{position:absolute;left:0;top:0;bottom:0;background:#F1F1F1;transition:width .6s ease}
+.opt.win{border-color:var(--glacier)}
+.opt.win .fill{background:#E3EDF3}
+.opt .txt,.opt .pc{position:relative}
+.opt.win .txt{font-weight:500}
+.opt .pc{font-family:var(--didone);font-size:30px;line-height:1;font-variant-numeric:tabular-nums}
+.opt:not(.win) .pc{color:var(--grey)}
+.opt.win .pc{color:var(--glacier)}
+.tick{color:var(--glacier);margin-left:4px}
+.opt.mine::after{content:"Votre vote";position:absolute;right:70px;top:50%;transform:translateY(-50%);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey)}
+.voters{display:flex;align-items:center;gap:12px;margin-top:16px;padding-top:14px;border-top:1px solid var(--hair);font-size:14px;color:var(--grey)}
+.voters strong{color:var(--ink);font-weight:500;font-variant-numeric:tabular-nums}
+.faces{display:flex;flex:none}
+.face{width:32px;height:32px;border-radius:50%;border:2px solid var(--ground);overflow:hidden;display:block}
+.face + .face{margin-left:-10px}
+.face svg{width:100%;height:100%;display:block}
+.face.f1{background:#D9CFC4}.face.f1 svg{fill:#8E7A68}
+.face.f2{background:#C8D3DA}.face.f2 svg{fill:#5F7384}
+.face.f3{background:#DCD6CF}.face.f3 svg{fill:#9A9189}
+@media (prefers-reduced-motion:reduce){.opt .fill{transition:none}}
+
+/* top 5 */
+.top5{padding:60px 0 0}
+.top5 .narrow > .label{color:var(--grey)}
+.top5 h2{font-family:var(--didone);font-weight:400;font-size:clamp(34px,9vw,58px);line-height:1.02;margin:8px 0 20px;text-wrap:balance}
+.top5 ol{list-style:none;margin:0 auto;padding:0 24px;max-width:600px}
+.top5 li{display:grid;grid-template-columns:30px 96px 1fr;gap:16px;align-items:center;padding:12px 0;border-top:1px solid var(--hair)}
+.top5 li:last-child{border-bottom:1px solid var(--hair)}
+.rk{font-family:var(--didone);font-size:40px;line-height:1;color:var(--grey);text-align:center}
+.thumb{width:96px;height:96px;padding:6px}
+img.thumb{padding:0;object-fit:cover;display:block;background:#F3F2EF}
+.thumb .label{font-size:8.5px;letter-spacing:.18em}
+.it{display:flex;flex-direction:column;gap:2px;min-width:0}
+.it .brand{font-size:9.5px;color:var(--grey)}
+.it strong{font-weight:500;font-size:18px;line-height:1.25}
+.it em{font-family:var(--italic);font-weight:300;font-size:16px;line-height:1.35;color:#555555}
+.it .pick{margin-top:6px;font-size:9.5px;color:var(--glacier)}
+.top5 li.first .rk{color:var(--glacier)}
+.top5 li.first strong{font-size:20px}
+
+/* quote */
+.quote{padding:120px 0 110px}
+.quote blockquote{margin:0;font-family:var(--italic);font-style:italic;font-weight:300;font-size:clamp(34px,9vw,60px);line-height:1.12;letter-spacing:-.01em;text-wrap:balance}
+.quote .label{margin-top:28px;color:var(--grey)}
+
+/* trustpilot reviews */
+.tp{padding:56px 0 44px}
+.tp-head{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px 10px;padding:0 24px 14px;font-size:14px;color:#191919}
+.tp-head strong{font-weight:500;font-size:17px}
+.tp-brand{font-weight:500;font-size:15px;letter-spacing:-.01em}
+.tp-brand b{color:#00B67A}
+.tp-stars{display:inline-flex;gap:2px}
+.tp-stars i{width:18px;height:18px;background:#00B67A;display:grid;place-content:center;position:relative}
+.tp-stars i::after{content:"★";color:#FFFFFF;font-size:13px;line-height:1;font-style:normal}
+.tp-head .tp-stars i{width:22px;height:22px}
+.tp-head .tp-stars i::after{font-size:16px}
+.tp-stars.s44 i:last-child{background:linear-gradient(90deg,#00B67A 40%,#DCDCE6 40%)}
+.tp-viewport{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.tp-track{display:flex;gap:12px;width:max-content;animation:tp-scroll 60s linear infinite;padding:2px 0}
+.tp-viewport:hover .tp-track,.tp-viewport.hold .tp-track{animation-play-state:paused}
+@keyframes tp-scroll{to{transform:translateX(calc(-50% - 6px))}}
+.tp-card{width:236px;flex:none;background:#FFFFFF;border:1px solid var(--hair);padding:14px 15px 12px;font-family:var(--sans)}
+.tp-card .tp-stars i{width:15px;height:15px}
+.tp-card .tp-stars i::after{font-size:11px}
+.tp-card h3{font-size:14px;font-weight:500;line-height:1.3;margin:10px 0 4px}
+.tp-card p{font-size:13px;line-height:1.45;color:#555555;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:57px}
+.tp-card footer{border:0;padding:10px 0 0;margin:0;text-align:left;font-size:11.5px;color:var(--grey)}
+.tp-card footer strong{color:#191919;font-weight:500}
+.tp-card footer{display:flex;align-items:center;gap:8px;line-height:1.35}
+.tp-av{width:26px;height:26px;border-radius:50%;display:grid;place-content:center;flex:none;font-size:10.5px;font-weight:500}
+@media (prefers-reduced-motion:reduce){.tp-track{animation:none}.tp-viewport{overflow-x:auto}}
+
+/* warehouse */
+.store .plate{aspect-ratio:4/5}
+.store .warehouse{display:block;width:100%;max-width:620px;margin:0 auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 55%}
+
+/* credits */
+.credits{padding:100px 0 0;max-width:560px;margin:0 auto;padding-left:24px;padding-right:24px}
+.credits > .label{text-align:center;color:var(--grey);margin-bottom:30px}
+.credit{display:grid;grid-template-columns:40px 1fr auto;align-items:baseline;gap:12px;padding:18px 0;border-top:1px solid var(--hair)}
+.credit:last-child{border-bottom:1px solid var(--hair)}
+.credit .n{font-family:var(--didone);font-size:26px;line-height:1;color:var(--grey)}
+.credit .t{font-size:16px;line-height:1.4}
+.credit .t span{display:block;font-family:var(--italic);font-style:italic;font-weight:300;color:var(--grey);font-size:15px}
+.credit .v{font-size:10px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:var(--grey);text-align:right}
+.credit.top .n,.credit.top .v{color:var(--ink)}
+.credit.top .t{font-weight:500}
+
+/* offer */
+.offer{padding:60px 0 52px}
+.offer .label{color:var(--grey)}
+.offer h2{font-family:var(--didone);font-weight:400;font-size:clamp(40px,11vw,76px);line-height:1;margin:10px 0 24px;text-wrap:balance}
+.btn{display:inline-block;background:var(--ink);color:var(--ground);text-decoration:none;font-family:var(--sans);font-weight:500;font-size:12px;letter-spacing:.3em;text-transform:uppercase;padding:21px 38px 21px calc(38px + .3em)}
+.btn:hover{background:#333333}
+.offer .fine{margin-top:18px;color:var(--grey);font-size:10px}
+
+footer{border-top:1px solid var(--hair);text-align:center;padding:20px 24px 26px;color:var(--grey);font-size:12px;font-weight:300}
+footer .name{font-family:var(--didone);font-size:20px;letter-spacing:.32em;color:var(--ink);margin-bottom:8px;padding-left:.32em}
+
+/* poll states */
+.opt .fill{width:0}
+.poll.done .opt .fill{width:var(--w)}
+.opt .pc,.opt .tick{transition:opacity .4s ease}
+.poll:not(.done) .opt .pc,.poll:not(.done) .opt .tick{opacity:0}
+.poll:not(.done) .opt.win{border-color:var(--hair)}
+.poll:not(.done) .opt.win .txt{font-weight:400}
+.poll:not(.done) .opt:hover{border-color:var(--ink)}
+.poll-hint{font-size:13px;color:var(--grey);margin:-6px 0 12px}
+.poll.done .poll-hint{visibility:hidden}
+img.face{object-fit:cover;background:#E9E6E1}
+.ba .mark{transition:opacity .2s ease}
+/* urgency */
+.urgent{display:flex;align-items:center;gap:14px;max-width:560px;margin:14px auto 0;padding:14px 18px;border:1px solid var(--ink);background:var(--ground)}
+@media (max-width:600px){.urgent{margin-left:16px;margin-right:16px}}
+.urgent .label{display:block;font-size:9.5px;color:#B3261E}
+.urgent p{font-family:var(--italic);font-style:italic;font-weight:400;font-size:20px;line-height:1.3}
+.dot{width:10px;height:10px;border-radius:50%;background:#C62828;flex:none;animation:mm-pulse 1.6s ease-out infinite}
+@keyframes mm-pulse{0%{box-shadow:0 0 0 0 rgba(198,40,40,.55)}70%{box-shadow:0 0 0 10px rgba(198,40,40,0)}100%{box-shadow:0 0 0 0 rgba(198,40,40,0)}}
+@media (prefers-reduced-motion:reduce){.dot{animation:none}}
+</style>
+</head>
+<body style="margin:0">
+
+
+<header class="mast">
+  <div class="name">THE <b>50</b> CLUB</div>
+  <div class="issue label">Style · Automne 2026</div>
+</header>
+
+<main>
+  <section class="open narrow">
+    <div class="label">Style</div>
+    <h1>Après <span class="fifty">50</span> ans, le détail qui fait l'élégance</h1>
+    <p class="deck">Le gris n'est pas le problème. C'est ce que vous posez devant.</p>
+    <div class="by label">Par la rédaction</div>
+  </section>
+
+  <figure class="bleed" style="margin:0">
+    <div class="ba" id="ba">
+      <img class="layer before" src="lp-assets/avant.jpg" alt="Homme poivre et sel en terrasse avec des lunettes noires épaisses" draggable="false">
+      <img class="layer after" src="lp-assets/apres-riviera.jpg" alt="Le même homme avec la Riviera, monture transparente et verres bleu glacier" draggable="false">
+      <span class="mark l label">Avant</span>
+      <span class="mark r label">Riviera</span>
+      <div class="line"><div class="knob" aria-hidden="true">‹ ›</div></div>
+      <input type="range" min="0" max="100" value="50" aria-label="Glisser pour comparer avant et après">
+    </div>
+    <figcaption class="cap">Même homme, même lumière. Seule la paire change.</figcaption>
+  </figure>
+
+  <section class="intro narrow">
+    <p>La plupart des lunettes de soleil sont trop sombres, trop massives. Sur un visage poivre et sel, elles écrasent tout et cachent le regard.</p>
+  </section>
+
+  <section class="pair">
+    <div class="narrow">
+      <div class="label">La paire</div>
+      <div class="word">Riviera</div>
+      <div class="label">Marco Moretti · Milano</div>
+    </div>
+    <div class="bleed"><img class="portrait" src="lp-assets/portrait-riviera.jpg" width="800" height="1433" decoding="async" alt="Homme poivre et sel portant la Riviera" style="background:#E9E6E1 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QCARXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAAAAAABIAAAAAQAAAEgAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAABCgAwAEAAAAAQAAABwAAAAA/8AAEQgAHAAQAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/bAEMABgYGBgYGCgYGCg4KCgoOEg4ODg4SFxISEhISFxwXFxcXFxccHBwcHBwcHCIiIiIiIicnJycnLCwsLCwsLCwsLP/bAEMBBwcHCwoLEwoKEy4fGh8uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLv/dAAQAAf/aAAwDAQACEQMRAD8A1viLc2zSpocSs8t0Ypn2H7gQFR/31/Su1+Hp/s3TZdI1A+UYj5sYcgHY3B/X+dcz4/0uOO6h1lXwZUELhThsoflI/PFc5LfS2d7ps19uX7RBIr/MTkjbj+X0rkp1OVpo6qtKLhfqf//Q8f1bxprutakuqXkoJUkpF/yzUHsB9KzLzV7/AFCRbi6lLMgCr6KPas3UIktr2W2i+4jYGeeKjJxbO3fBpxjHSSRcpS1i2f/Z) center/cover no-repeat"></div>
+    <div class="specs">
+      <div><div class="label">Bleu glacier</div><p>Il s'accorde au gris au lieu de le couper.</p></div>
+      <div><div class="label">Verre dégradé</div><p>Il s'éclaircit vers le bas. On voit vos yeux.</p></div>
+      <div><div class="label">Monture fine</div><p>Transparente, légère, dessinée en Italie.</p></div>
+    </div>
+  </section>
+
+  <section class="vote">
+    <div class="narrow">
+      <div class="label">Le vote des lecteurs</div>
+      <h2>Lequel a le plus d'allure ?</h2>
+    </div>
+    <div class="bleed">
+      <div class="duo">
+        <figure class="pick"><img src="lp-assets/vote-a-noire.jpg" width="640" height="1147" decoding="async" alt="Photo A : paire noire" style="background:#E9E6E1 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QCARXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAAAAAABIAAAAAQAAAEgAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAABCgAwAEAAAAAQAAABwAAAAA/8AAEQgAHAAQAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/bAEMABgYGBgYGCgYGCg4KCgoOEg4ODg4SFxISEhISFxwXFxcXFxccHBwcHBwcHCIiIiIiIicnJycnLCwsLCwsLCwsLP/bAEMBBwcHCwoLEwoKEy4fGh8uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLv/dAAQAAf/aAAwDAQACEQMRAD8A9P8AFfia80d4bPTIBPPKNxz0C5x/OpvDfiC51WGaPUkWC4gI3AHKlW6EV4Qbl9UaOC7nkVwxMW1ypcj5ipOckHrXX+HbjSdFZrR38ue6BlG9shgD0BPpnpThXvPXY0dFezutz//Q8Ke9uzcR3av+8Rgwz2IrX1vXDrUlo4iEP2dCGwf4iece1cyjkJmnM7LyKtxV1IpTai4rZn//2Q==) center/cover no-repeat"><span class="label">A</span></figure>
+        <figure class="pick"><img src="lp-assets/vote-b-riviera.jpg" width="640" height="1147" decoding="async" alt="Photo B : Riviera" style="background:#E9E6E1 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QCARXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAAAAAABIAAAAAQAAAEgAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAABCgAwAEAAAAAQAAABwAAAAA/8AAEQgAHAAQAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/bAEMABgYGBgYGCgYGCg4KCgoOEg4ODg4SFxISEhISFxwXFxcXFxccHBwcHBwcHCIiIiIiIicnJycnLCwsLCwsLCwsLP/bAEMBBwcHCwoLEwoKEy4fGh8uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLv/dAAQAAf/aAAwDAQACEQMRAD8A0be+1R7GG7g2vJdxhyztwoYtn9cYFbmkPdyO1tqSjzEUNlD8pyTx9RXnekvJG8+jvNFKURSuDuVQp6V1Wl6/pUF3Nps8qx3If5s8AnrwT9ayTblZm6ilT5j/0PD7DUbnT7pby1b5l7HkEHqDTbi5kuZnvJ2y7MXJ96yYXYqCfSrduA7hG5VuCPxq9L3Ku7WP/9k=) center/cover no-repeat"><span class="label">B</span></figure>
+      </div>
+    </div>
+    <div class="poll" id="poll">
+      <div class="poll-head"><span class="label">Sondage lecteurs</span><span class="label closed">Lancé le 23 août 2026</span></div>
+      <p class="poll-hint">Touchez votre choix pour voter.</p>
+      <button class="opt" type="button" style="--w:12%"><span class="fill"></span><span class="txt">A · Grande marque</span><span class="pc">12 %</span></button>
+      <button class="opt win" type="button" style="--w:88%"><span class="fill"></span><span class="txt">B · Riviera <span class="tick" aria-hidden="true">✓</span></span><span class="pc">88 %</span></button>
+      <div class="voters">
+        <div class="faces" aria-hidden="true"><img class="face" src="lp-assets/face-1.jpg" width="32" height="32" alt=""><img class="face" src="lp-assets/face-2.jpg" width="32" height="32" alt=""><img class="face" src="lp-assets/face-3.jpg" width="32" height="32" alt=""></div>
+        <p><strong id="count">9 612</strong> personnes ont voté</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp">
+    <div class="tp-head">
+      <strong>Excellent</strong>
+      <span class="tp-stars s44" aria-label="4,4 étoiles sur 5"><i></i><i></i><i></i><i></i><i></i></span>
+      <span>4,4 sur 5 · 2 800+ avis sur</span>
+      <span class="tp-brand"><b>★</b> Trustpilot</span>
+    </div>
+    <div class="tp-viewport" id="tp">
+      <div class="tp-track">
+        <!-- Avis Trustpilot réels fournis par Ruben (15/09/2026) -->
+        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>Très belles lunettes</h3><p>Très belles lunettes, au design parfait. J’ai reçu beaucoup de compliments à leur sujet.</p><footer><span class="tp-av" style="background:#7BA148;color:#FFFFFF">AF</span><span><strong>Alain Fondanaux</strong> · FR<br>10 sept. 2026</span></footer></article>
+        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>Très contente de ma commande</h3><p>Les deux paires de lunettes sont parfaites, solides et très belles, exactement comme sur le site.</p><footer><span class="tp-av" style="background:#DDE3E8;color:#191919">C</span><span><strong>Collin</strong> · BE<br>18 août 2026</span></footer></article>
+        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>je trouve le design au top elles ont…</h3><p>je trouve le design au top elles ont l&#x27;air solides. j&#x27;en ai commandé 5 au total. e viva Moretti!</p><footer><span class="tp-av" style="background:#E8E6FB;color:#191919">MJ</span><span><strong>moschietto jerome</strong> · FR<br>10 sept. 2026</span></footer></article>
+        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>L&#x27;Italie vous habille</h3><p>Produits de qualité dans le parfait style italien tout à fait conformes à la commande.</p><footer><span class="tp-av" style="background:#FBE5D6;color:#191919">DL</span><span><strong>Daniel Le Goff</strong> · FR<br>28 août 2026</span></footer></article>
+        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>Lunettes au top 👍</h3><p>Qualité et prix imbattable!!! Je ne porte que ça depuis mon achat et je les recommande à 100 %</p><footer><span class="tp-av" style="background:#DCD6CF;color:#191919">MD</span><span><strong>Momo Dion</strong> · FR<br>8 août 2026</span></footer></article>
+        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>Je remercie l&#x27;équipe Marco Moretti pour…</h3><p>Des lunettes de qualité, la classe à l&#x27;italienne. Continuez comme vous êtes , MERCI 💐.</p><footer><span class="tp-av" style="background:#E8E6FB;color:#191919">EL</span><span><strong>Elyne</strong> · BE<br>12 sept. 2026</span></footer></article>
+        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>Des lunettes magnifiques pas chères de…</h3><p>Des lunettes magnifiques pas chères de très bonne qualité et avec des offres et des prix attractifs</p><footer><span class="tp-av" style="background:#F6D6E4;color:#191919">PB</span><span><strong>Peio Ben</strong> · FR<br>24 août 2026</span></footer></article>
+      </div>
+    </div>
+  </section>
+
+  <figure class="store bleed" style="margin:0">
+    <img class="warehouse" src="lp-assets/entrepot.jpg" width="720" height="1287" decoding="async" alt="Boîte Marco Moretti tenue à la main dans l’entrepôt" style="background:#E9E6E1 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAEKADAAQAAAABAAAAHAAAAAD/wAARCAAcABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9sAQwAGBgYGBgYKBgYKDgoKCg4SDg4ODhIXEhISEhIXHBcXFxcXFxwcHBwcHBwcIiIiIiIiJycnJycsLCwsLCwsLCws/9sAQwEHBwcLCgsTCgoTLh8aHy4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4u/90ABAAB/9oADAMBAAIRAxEAPwDPOk2u17mwdUhuXw6R/wAEiuwRhjoChwR9KlvFiinZnl83Z5agF8LgYAz68AVm362Gh2BSxAjm89lJJOWEbMFA9cADJ+lULC/S81E28IZmeVZRn5sKv+z0wvpWTV2a3sf/0OAtfI8S28emxSsslnKczYyHSQnpnoTjv6V2z2Gn+FdQY2KbP3eBISWfdjuT6msXwrbQ2vhbT7iFcSXVxM8jdyUO1fwAH6mtzXZXkZ2fn5SfyFc9TRtI3i72bP/Z) center/cover no-repeat">
+    <div class="urgent" role="status"><span class="dot" aria-hidden="true"></span><div><span class="label">En ce moment</span><p>Une Riviera est vendue toutes les 15 secondes.</p></div></div>
+  </figure>
+
+  <section class="top5">
+    <div class="narrow">
+      <div class="label">Le classement</div>
+      <h2>Les 5 paires les mieux portées après 50 ans</h2>
+    </div>
+    <ol>
+      <li class="first">
+        <span class="rk">1</span>
+        <img class="thumb" src="lp-assets/top-riviera.jpg" alt="Riviera, Marco Moretti" loading="lazy">
+        <div class="it"><span class="label brand">Marco Moretti</span><strong>Riviera</strong><em>Le bleu glacier qui va le mieux au gris.</em><span class="label pick">Choix des lecteurs</span></div>
+      </li>
+      <li>
+        <span class="rk">2</span>
+        <img class="thumb" src="lp-assets/top-santorini.jpg" alt="Santorini, Marco Moretti" loading="lazy">
+        <div class="it"><span class="label brand">Marco Moretti</span><strong>Santorini</strong><em>Monture transparente, dégradé bleu et sable.</em></div>
+      </li>
+      <li>
+        <span class="rk">3</span>
+        <img class="thumb" src="lp-assets/top-calypso.jpg" alt="Calypso, Marco Moretti" loading="lazy">
+        <div class="it"><span class="label brand">Marco Moretti</span><strong>Calypso</strong><em>Le dégradé qui donne un teint hâlé.</em></div>
+      </li>
+      <li>
+        <span class="rk">4</span>
+        <img class="thumb" src="lp-assets/top-rayban.jpg" alt="Ray-Ban Wayfarer" loading="lazy">
+        <div class="it"><span class="label brand">Ray-Ban</span><strong>Wayfarer</strong><em>Une icône, mais le noir durcit le gris.</em></div>
+      </li>
+      <li>
+        <span class="rk">5</span>
+        <img class="thumb" src="lp-assets/top-oakley.jpg" alt="Oakley sport" loading="lazy">
+        <div class="it"><span class="label brand">Oakley</span><strong>Sport enveloppante</strong><em>Parfaite sur un vélo, pas au dîner.</em></div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="offer narrow">
+    <div class="label">Offre en cours</div>
+    <h2>Une paire achetée, une paire offerte</h2>
+    <a class="btn" href="https://marcomoretti.com/collections/2025-collection/products/lunettes-riviera-lunettes-transparentes-a-verres-bleus-degrades" target="_blank" rel="noopener">Découvrir la Riviera</a>
+  </section>
+</main>
+
+<footer>
+  <div class="name">THE <b>50</b> CLUB</div>
+</footer>
+
+<script>
+(function(){
+  var ba=document.getElementById('ba');
+  var r=ba.querySelector('input');
+  var ml=ba.querySelector('.mark.l'),mr=ba.querySelector('.mark.r');
+  function upd(){var v=+r.value;ba.style.setProperty('--pos',v+'%');ml.style.opacity=Math.max(0,Math.min(1,(v-3)/10));mr.style.opacity=Math.max(0,Math.min(1,(97-v)/10));}
+  r.addEventListener('input',upd);
+  var tp=document.getElementById('tp'),track=tp.querySelector('.tp-track');
+  track.innerHTML+=track.innerHTML;
+  tp.addEventListener('touchstart',function(){tp.classList.add('hold')},{passive:true});
+  tp.addEventListener('touchend',function(){tp.classList.remove('hold')});
+  var poll=document.getElementById('poll'),count=document.getElementById('count'),done=false;
+  poll.querySelectorAll('.opt').forEach(function(o){
+    o.addEventListener('click',function(){
+      if(done)return;done=true;
+      o.classList.add('mine');poll.classList.add('done');
+      count.textContent='9 613';
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
