@@ -394,6 +394,10 @@ footer{padding-bottom:34px}
 
 /* une seule coche apres le vote : celle qui marque le choix du lecteur */
 .poll.done .tick{display:none}
+
+.voters strong{transition:color .3s ease}
+.voters strong.bump{color:var(--glacier)}
+@media (prefers-reduced-motion:reduce){.voters strong{transition:none}}
 </style>
 </head>
 <body style="margin:0">
@@ -568,12 +572,33 @@ footer{padding-bottom:34px}
   track.innerHTML+=track.innerHTML;
   tp.addEventListener('touchstart',function(){tp.classList.add('hold')},{passive:true});
   tp.addEventListener('touchend',function(){tp.classList.remove('hold')});
+
+  // compteur de votes vivant
+  (function(){
+    var el=document.getElementById('count'); if(!el) return;
+    var SEP=' ';
+    var fmt=function(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,SEP)};
+    var jours=Math.floor((Date.now()-Date.UTC(2026,8,16))/86400000);
+    var base=9612+Math.max(0,jours)*147;
+    var total=base, ajoutes=0, MAX=60;
+    el.textContent=fmt(total);
+    function tick(){
+      if(ajoutes>=MAX) return;
+      var pas=Math.random()<0.18?2:1;
+      total+=pas; ajoutes+=pas;
+      el.textContent=fmt(total);
+      el.classList.add('bump'); setTimeout(function(){el.classList.remove('bump')},420);
+      setTimeout(tick, 3200+Math.random()*5200);
+    }
+    setTimeout(tick, 2500+Math.random()*2500);
+    window.__voteTotal=function(){return total};
+  })();
   var poll=document.getElementById('poll'),count=document.getElementById('count'),phint=document.getElementById('phint'),done=false;
   poll.querySelectorAll('.opt').forEach(function(o){
     o.addEventListener('click',function(){
       poll.querySelectorAll('.opt').forEach(function(x){x.classList.remove('mine')});
       o.classList.add('mine');poll.classList.add('done');
-      if(!done){done=true;count.textContent='9 613';}
+      if(!done){done=true;var t=(window.__voteTotal?window.__voteTotal():9612)+1;count.textContent=String(t).replace(/\B(?=(\d{3})+(?!\d))/g,' ');}
       if(phint)phint.textContent='Vous pouvez changer de vote.';
     });
   });
