@@ -75,7 +75,7 @@ h1 .fifty{font-family:'Bodoni Moda','Didot','Bodoni 72',Georgia,serif;font-weigh
 .word{font-family:var(--didone);font-size:clamp(80px,24vw,200px);line-height:.9;letter-spacing:-.02em;margin:8px 0 4px}
 .word + .label{color:var(--ink)}
 .pair .plate{aspect-ratio:4/5;margin-top:44px}
-.pair .portrait{display:block;width:100%;max-width:620px;margin:24px auto 0;aspect-ratio:4/5;object-fit:cover;object-position:50% 35%}
+img.portrait{display:block;width:calc(100% - 32px);max-width:560px;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;margin:24px auto 0}
 .specs{display:grid;gap:18px;padding:24px 24px 0;max-width:960px;margin:0 auto;text-align:center}
 @media (min-width:760px){.specs{grid-template-columns:repeat(3,1fr);gap:40px}}
 .specs .label{margin-bottom:4px}
@@ -182,7 +182,7 @@ img.thumb{padding:0;object-fit:cover;display:block;background:#F3F2EF}
 
 /* warehouse */
 .store .plate{aspect-ratio:4/5}
-.store{display:flex;align-items:stretch;width:calc(100% - 32px);max-width:430px;margin:0 auto;border:1px solid var(--ink)}
+.store{display:flex;align-items:stretch;width:calc(100% - 32px);max-width:430px;margin:24px auto 0;border:1px solid var(--ink)}
 .store .warehouse{width:140px;flex:none;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:50% 62%;display:block;align-self:stretch}
 .store .urgent{flex:1;min-width:0;width:auto;max-width:none;margin:0;border:0;border-left:1px solid var(--hair);padding:12px 14px;gap:10px}
 .store .urgent p{font-size:16px;line-height:1.25}
@@ -231,6 +231,25 @@ img.face{object-fit:cover;background:#E9E6E1}
 .dot{width:10px;height:10px;border-radius:50%;background:#C62828;flex:none;animation:mm-pulse 1.6s ease-out infinite}
 @keyframes mm-pulse{0%{box-shadow:0 0 0 0 rgba(198,40,40,.55)}70%{box-shadow:0 0 0 10px rgba(198,40,40,0)}100%{box-shadow:0 0 0 0 rgba(198,40,40,0)}}
 @media (prefers-reduced-motion:reduce){.dot{animation:none}}
+
+/* ---- confort grand ecran ---- */
+.ba-fig{margin:0 auto}
+.store,.poll,.urgent{box-sizing:border-box}
+@media (min-width:760px){
+  .ba{max-width:560px}
+  img.portrait{max-width:560px}
+  .duo{max-width:700px}
+  .duo .pick{aspect-ratio:4/5}
+  .scores{max-width:700px;margin:0 auto}
+  .tp-card{width:260px}
+  .top5 ol{max-width:640px}
+  .cap{font-size:17px}
+}
+@media (min-width:1100px){
+  .open{padding:52px 0 30px}
+  .narrow{max-width:620px}
+  .intro p{font-size:20px}
+}
 </style>
 </head>
 <body style="margin:0">
@@ -249,7 +268,7 @@ img.face{object-fit:cover;background:#E9E6E1}
     <div class="by label">Par la rédaction</div>
   </section>
 
-  <figure class="bleed" style="margin:0">
+  <figure class="bleed ba-fig">
     <div class="ba" id="ba">
       <img class="layer before" src="lp-assets/avant.jpg" alt="Homme poivre et sel en terrasse avec des lunettes noires épaisses" draggable="false">
       <img class="layer after" src="lp-assets/apres-riviera.jpg" alt="Le même homme avec la Riviera, monture transparente et verres bleu glacier" draggable="false">
@@ -271,7 +290,7 @@ img.face{object-fit:cover;background:#E9E6E1}
       <div class="word">Riviera</div>
       <div class="label">Marco Moretti · Milano</div>
     </div>
-    <div class="bleed"><img class="portrait" src="lp-assets/portrait-riviera.jpg" width="800" height="1433" decoding="async" alt="Homme poivre et sel portant la Riviera" style="background:#E9E6E1 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QCARXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAAAAAABIAAAAAQAAAEgAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAABCgAwAEAAAAAQAAABwAAAAA/8AAEQgAHAAQAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/bAEMABgYGBgYGCgYGCg4KCgoOEg4ODg4SFxISEhISFxwXFxcXFxccHBwcHBwcHCIiIiIiIicnJycnLCwsLCwsLCwsLP/bAEMBBwcHCwoLEwoKEy4fGh8uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLv/dAAQAAf/aAAwDAQACEQMRAD8A1viLc2zSpocSs8t0Ypn2H7gQFR/31/Su1+Hp/s3TZdI1A+UYj5sYcgHY3B/X+dcz4/0uOO6h1lXwZUELhThsoflI/PFc5LfS2d7ps19uX7RBIr/MTkjbj+X0rkp1OVpo6qtKLhfqf//Q8f1bxprutakuqXkoJUkpF/yzUHsB9KzLzV7/AFCRbi6lLMgCr6KPas3UIktr2W2i+4jYGeeKjJxbO3fBpxjHSSRcpS1i2f/Z) center/cover no-repeat"></div>
+    <div class="bleed"><img class="portrait" src="lp-assets/portrait-riviera.jpg" decoding="async" alt="Homme poivre et sel portant la Riviera" style="background:#E9E6E1 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QCARXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAAAAAABIAAAAAQAAAEgAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAABCgAwAEAAAAAQAAABwAAAAA/8AAEQgAHAAQAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/bAEMABgYGBgYGCgYGCg4KCgoOEg4ODg4SFxISEhISFxwXFxcXFxccHBwcHBwcHCIiIiIiIicnJycnLCwsLCwsLCwsLP/bAEMBBwcHCwoLEwoKEy4fGh8uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLv/dAAQAAf/aAAwDAQACEQMRAD8A1viLc2zSpocSs8t0Ypn2H7gQFR/31/Su1+Hp/s3TZdI1A+UYj5sYcgHY3B/X+dcz4/0uOO6h1lXwZUELhThsoflI/PFc5LfS2d7ps19uX7RBIr/MTkjbj+X0rkp1OVpo6qtKLhfqf//Q8f1bxprutakuqXkoJUkpF/yzUHsB9KzLzV7/AFCRbi6lLMgCr6KPas3UIktr2W2i+4jYGeeKjJxbO3fBpxjHSSRcpS1i2f/Z) center/cover no-repeat"></div>
     <div class="specs">
       <div><div class="label">Bleu glacier</div><p>Il s'accorde au gris au lieu de le couper.</p></div>
       <div><div class="label">Verre dégradé</div><p>Il s'éclaircit vers le bas. On voit vos yeux.</p></div>
@@ -323,7 +342,7 @@ img.face{object-fit:cover;background:#E9E6E1}
     </div>
   </section>
 
-  <figure class="store bleed" style="margin:0">
+  <figure class="store bleed">
     <img class="warehouse" src="lp-assets/entrepot.jpg" width="720" height="1287" decoding="async" alt="Boîte Marco Moretti tenue à la main dans l’entrepôt" style="background:#E9E6E1 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAEKADAAQAAAABAAAAHAAAAAD/wAARCAAcABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9sAQwAGBgYGBgYKBgYKDgoKCg4SDg4ODhIXEhISEhIXHBcXFxcXFxwcHBwcHBwcIiIiIiIiJycnJycsLCwsLCwsLCws/9sAQwEHBwcLCgsTCgoTLh8aHy4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4u/90ABAAB/9oADAMBAAIRAxEAPwDPOk2u17mwdUhuXw6R/wAEiuwRhjoChwR9KlvFiinZnl83Z5agF8LgYAz68AVm362Gh2BSxAjm89lJJOWEbMFA9cADJ+lULC/S81E28IZmeVZRn5sKv+z0wvpWTV2a3sf/0OAtfI8S28emxSsslnKczYyHSQnpnoTjv6V2z2Gn+FdQY2KbP3eBISWfdjuT6msXwrbQ2vhbT7iFcSXVxM8jdyUO1fwAH6mtzXZXkZ2fn5SfyFc9TRtI3i72bP/Z) center/cover no-repeat">
     <div class="urgent" role="status"><span class="dot" aria-hidden="true"></span><div><span class="label">En ce moment</span><p>Une Riviera est vendue toutes les 15 secondes.</p></div></div>
   </figure>
