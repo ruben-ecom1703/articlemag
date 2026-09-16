@@ -256,6 +256,20 @@ img.face{object-fit:cover;background:#E9E6E1}
 .soft-cta a:hover{color:var(--glacier);border-color:var(--glacier)}
 .poll.done .opt{cursor:pointer}
 .poll.done .poll-hint{visibility:visible;color:var(--grey)}
+
+/* le bleu suit le vote du lecteur */
+.poll.done .opt.win:not(.mine){border-color:var(--hair)}
+.poll.done .opt.win:not(.mine) .fill{background:#F1F1F1}
+.poll.done .opt.win:not(.mine) .pc{color:var(--grey)}
+.poll.done .opt.win:not(.mine) .txt{font-weight:400}
+.poll.done .opt.win:not(.mine) .tick{display:none}
+.poll.done .opt.mine{border-color:var(--glacier)}
+.poll.done .opt.mine .fill{background:#E3EDF3}
+.poll.done .opt.mine .pc{color:var(--glacier)}
+.poll.done .opt.mine .txt{font-weight:500}
+.poll.done .opt.mine .txt::after{color:var(--glacier)}
+.poll.done .opt.mine .txt::before{content:"\2713\00a0";color:var(--glacier)}
+.opt{transition:border-color .25s ease}
 </style>
 </head>
 <body style="margin:0">
