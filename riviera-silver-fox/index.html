@@ -164,7 +164,7 @@ img.thumb{padding:0;object-fit:cover;display:block;background:#F3F2EF}
 .tp-stars i::after{content:"★";color:#FFFFFF;font-size:13px;line-height:1;font-style:normal}
 .tp-head .tp-stars i{width:22px;height:22px}
 .tp-head .tp-stars i::after{font-size:16px}
-.tp-stars.s44 i:last-child{background:linear-gradient(90deg,#00B67A 40%,#DCDCE6 40%)}
+.tp-stars.s44 i:last-child{background:linear-gradient(90deg,#00B67A 50%,#DCDCE6 50%)}
 .tp-viewport{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
 .tp-track{display:flex;gap:12px;width:max-content;animation:tp-scroll 60s linear infinite;padding:2px 0}
 .tp-viewport:hover .tp-track,.tp-viewport.hold .tp-track{animation-play-state:paused}
@@ -270,6 +270,26 @@ img.face{object-fit:cover;background:#E9E6E1}
 .poll.done .opt.mine .txt::after{color:var(--glacier)}
 .poll.done .opt.mine .txt::before{content:"\2713\00a0";color:var(--glacier)}
 .opt{transition:border-color .25s ease}
+
+/* ---- marges de securite telephone ---- */
+p,h1,h2,h3,li,figcaption,blockquote,.it strong,.tp-card h3,.urgent p,.opt .txt{overflow-wrap:break-word}
+@media (max-width:600px){
+  .narrow{padding:0 28px}
+  .cap{padding-left:28px;padding-right:28px}
+  .specs{padding-left:28px;padding-right:28px}
+  .top5 ol{padding-left:28px;padding-right:28px}
+  .tp-head{padding-left:28px;padding-right:28px}
+  .poll{margin-left:20px;margin-right:20px}
+  .store{width:calc(100% - 40px)}
+  h1{font-size:clamp(36px,11vw,104px)}
+  .word{font-size:clamp(66px,21vw,200px)}
+  .quote blockquote,.vote h2{padding:0}
+}
+@media (max-width:360px){
+  .narrow{padding:0 22px}
+  .top5 li{grid-template-columns:24px 72px 1fr;gap:10px}
+  .thumb{width:72px;height:72px}
+}
 </style>
 </head>
 <body style="margin:0">
@@ -345,8 +365,8 @@ img.face{object-fit:cover;background:#E9E6E1}
   <section class="tp">
     <div class="tp-head">
       <strong>Excellent</strong>
-      <span class="tp-stars s44" aria-label="4,4 étoiles sur 5"><i></i><i></i><i></i><i></i><i></i></span>
-      <span>4,4 sur 5 · 2 800+ avis sur</span>
+      <span class="tp-stars s44" aria-label="4,5 étoiles sur 5"><i></i><i></i><i></i><i></i><i></i></span>
+      <span>4,5 sur 5 · 2 800+ avis sur</span>
       <span class="tp-brand"><b>★</b> Trustpilot</span>
     </div>
     <div class="tp-viewport" id="tp">
