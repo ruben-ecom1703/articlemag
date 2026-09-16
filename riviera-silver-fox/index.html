@@ -250,6 +250,12 @@ img.face{object-fit:cover;background:#E9E6E1}
   .narrow{max-width:620px}
   .intro p{font-size:20px}
 }
+
+.soft-cta{text-align:center;margin:16px 0 0}
+.soft-cta a{font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:4px}
+.soft-cta a:hover{color:var(--glacier);border-color:var(--glacier)}
+.poll.done .opt{cursor:pointer}
+.poll.done .poll-hint{visibility:visible;color:var(--grey)}
 </style>
 </head>
 <body style="margin:0">
@@ -291,6 +297,7 @@ img.face{object-fit:cover;background:#E9E6E1}
       <div class="label">Marco Moretti · Milano</div>
     </div>
     <div class="bleed"><img class="portrait" src="lp-assets/portrait-riviera.jpg" decoding="async" alt="Homme poivre et sel portant la Riviera" style="background:#E9E6E1 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QCARXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAAAAAABIAAAAAQAAAEgAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAABCgAwAEAAAAAQAAABwAAAAA/8AAEQgAHAAQAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/bAEMABgYGBgYGCgYGCg4KCgoOEg4ODg4SFxISEhISFxwXFxcXFxccHBwcHBwcHCIiIiIiIicnJycnLCwsLCwsLCwsLP/bAEMBBwcHCwoLEwoKEy4fGh8uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLv/dAAQAAf/aAAwDAQACEQMRAD8A1viLc2zSpocSs8t0Ypn2H7gQFR/31/Su1+Hp/s3TZdI1A+UYj5sYcgHY3B/X+dcz4/0uOO6h1lXwZUELhThsoflI/PFc5LfS2d7ps19uX7RBIr/MTkjbj+X0rkp1OVpo6qtKLhfqf//Q8f1bxprutakuqXkoJUkpF/yzUHsB9KzLzV7/AFCRbi6lLMgCr6KPas3UIktr2W2i+4jYGeeKjJxbO3fBpxjHSSRcpS1i2f/Z) center/cover no-repeat"></div>
+    <p class="soft-cta"><a href="https://marcomoretti.com/collections/2025-collection/products/lunettes-riviera-lunettes-transparentes-a-verres-bleus-degrades" target="_blank" rel="noopener">Découvrir la Riviera <span aria-hidden="true">&#8594;</span></a></p>
     <div class="specs">
       <div><div class="label">Bleu glacier</div><p>Il s'accorde au gris au lieu de le couper.</p></div>
       <div><div class="label">Verre dégradé</div><p>Il s'éclaircit vers le bas. On voit vos yeux.</p></div>
@@ -311,7 +318,7 @@ img.face{object-fit:cover;background:#E9E6E1}
     </div>
     <div class="poll" id="poll">
       <div class="poll-head"><span class="label">Sondage lecteurs</span><span class="label closed">Lancé le 23 août 2026</span></div>
-      <p class="poll-hint">Touchez votre choix pour voter.</p>
+      <p class="poll-hint" id="phint">Touchez votre choix pour voter.</p>
       <button class="opt" type="button" style="--w:12%"><span class="fill"></span><span class="txt">A · Grande marque</span><span class="pc">12 %</span></button>
       <button class="opt win" type="button" style="--w:88%"><span class="fill"></span><span class="txt">B · Riviera <span class="tick" aria-hidden="true">✓</span></span><span class="pc">88 %</span></button>
       <div class="voters">
@@ -403,12 +410,13 @@ img.face{object-fit:cover;background:#E9E6E1}
   track.innerHTML+=track.innerHTML;
   tp.addEventListener('touchstart',function(){tp.classList.add('hold')},{passive:true});
   tp.addEventListener('touchend',function(){tp.classList.remove('hold')});
-  var poll=document.getElementById('poll'),count=document.getElementById('count'),done=false;
+  var poll=document.getElementById('poll'),count=document.getElementById('count'),phint=document.getElementById('phint'),done=false;
   poll.querySelectorAll('.opt').forEach(function(o){
     o.addEventListener('click',function(){
-      if(done)return;done=true;
+      poll.querySelectorAll('.opt').forEach(function(x){x.classList.remove('mine')});
       o.classList.add('mine');poll.classList.add('done');
-      count.textContent='9 613';
+      if(!done){done=true;count.textContent='9 613';}
+      if(phint)phint.textContent='Vous pouvez changer de vote.';
     });
   });
 })();
