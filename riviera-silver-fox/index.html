@@ -333,6 +333,22 @@ p,h1,h2,h3,li,figcaption,blockquote,.it strong,.tp-card h3,.urgent p,.opt .txt{o
 .offer-sub{font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--grey)}
 .tp-mini{margin:14px auto 46px;padding:0 24px}
 .store{margin-top:34px}
+
+/* ---- offre : bouton vert, encadre seul ---- */
+.offer-card{border:1px solid var(--ink);padding:24px 20px 24px;text-align:center}
+.offer-flag{display:inline-block;background:var(--ink);color:#FFFFFF;font-family:var(--sans);font-weight:500;font-size:10px;letter-spacing:.24em;text-transform:uppercase;padding:6px 12px 6px 14px}
+.offer-card .offer-sub{margin:14px 0 16px;font-family:var(--italic);font-style:italic;font-size:20px;letter-spacing:0;text-transform:none;color:var(--ink)}
+.offer-btn{display:block;background:#00B67A;color:#FFFFFF;text-decoration:none;font-family:var(--sans);font-weight:600;font-size:15px;letter-spacing:.12em;text-transform:uppercase;padding:20px 18px 20px 20px}
+.offer-btn:hover{background:#00A06B}
+.about .soft-cta{margin-top:22px}
+/* ---- pied de page ---- */
+.foot-links{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 18px;margin:10px 0 12px}
+.foot-links a{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--hair);padding-bottom:3px}
+.foot-links a:hover{border-color:var(--ink)}
+.foot-legal{font-size:11px;color:var(--grey);line-height:1.8}
+.foot-legal a{color:var(--grey);text-decoration:none}
+.foot-legal a:hover{text-decoration:underline}
+footer{padding-bottom:34px}
 </style>
 </head>
 <body style="margin:0">
@@ -394,7 +410,7 @@ p,h1,h2,h3,li,figcaption,blockquote,.it strong,.tp-card h3,.urgent p,.opt .txt{o
       <div class="poll-head"><span class="label">Sondage lecteurs</span><span class="label closed">Lancé le 23 août 2026</span></div>
       <p class="poll-q">Quelle paire préférez-vous ?</p>
       <p class="poll-hint" id="phint">Touchez votre choix pour voter.</p>
-      <button class="opt" type="button" style="--w:7%"><span class="fill"></span><span class="txt">A · Grande marque</span><span class="pc">7 %</span></button>
+      <button class="opt" type="button" style="--w:7%"><span class="fill"></span><span class="txt">A · Ray-Ban</span><span class="pc">7 %</span></button>
       <button class="opt win" type="button" style="--w:93%"><span class="fill"></span><span class="txt">B · Riviera <span class="tick" aria-hidden="true">✓</span></span><span class="pc">93 %</span></button>
       <div class="voters">
         <div class="faces" aria-hidden="true"><img class="face" src="lp-assets/face-1.jpg" width="32" height="32" alt=""><img class="face" src="lp-assets/face-2.jpg" width="32" height="32" alt=""><img class="face" src="lp-assets/face-3.jpg" width="32" height="32" alt=""><img class="face" src="lp-assets/face-4.jpg" width="32" height="32" alt=""><img class="face" src="lp-assets/face-5.jpg" width="32" height="32" alt=""></div>
@@ -443,6 +459,7 @@ p,h1,h2,h3,li,figcaption,blockquote,.it strong,.tp-card h3,.urgent p,.opt .txt{o
       <div><span class="label">Origine</span><p>Pensée et dessinée en Italie</p></div>
       <div><span class="label">Matière</span><p>Acétate, charnières japonaises</p></div>
     </div>
+    <p class="soft-cta"><a href="https://marcomoretti.com/collections/2025-collection/products/lunettes-riviera-lunettes-transparentes-a-verres-bleus-degrades" target="_blank" rel="noopener">Découvrir la Riviera <span aria-hidden="true">&#8594;</span></a></p>
   </section>
   <section class="tp">
     <div class="narrow tp-title"><div class="label">Les clients</div><h2>Voici ce que pensent les clients</h2></div>
@@ -455,7 +472,19 @@ p,h1,h2,h3,li,figcaption,blockquote,.it strong,.tp-card h3,.urgent p,.opt .txt{o
     <div class="tp-viewport" id="tp">
       <div class="tp-track">
         <!-- Avis Trustpilot réels fournis par Ruben (15/09/2026) -->
-        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>Très belles lunettes</h3><p>Très belles lunettes, au design parfait. J’ai reçu beaucoup de compliments à leur sujet.</p><footer><span class="tp-av" style="background:#7BA148;color:#FFFFFF">AF</span><span><strong>Alain Fondanaux</strong> · FR<br>10 sept. 2026</span></footer></article>
+        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>Très belles lunettes</h3><p>Très belles lunettes, au design parfait. J’ai reçu beaucoup de compliments à leur sujet.</p><footer>
+  <div class="name">THE <b>50</b> CLUB</div>
+  <nav class="foot-links">
+    <a href="https://marcomoretti.com" target="_blank" rel="noopener">En savoir plus</a>
+    <a href="https://marcomoretti.com" target="_blank" rel="noopener">Donner mon avis</a>
+    <a href="https://marcomoretti.com" target="_blank" rel="noopener">Nous contacter</a>
+  </nav>
+  <p class="foot-legal">
+    <a href="https://marcomoretti.com" target="_blank" rel="noopener">Politique de confidentialité</a> ·
+    <a href="https://marcomoretti.com" target="_blank" rel="noopener">Mentions légales</a> ·
+    <a href="https://marcomoretti.com" target="_blank" rel="noopener">Livraison et retours</a>
+  </p>
+</footer></article>
         <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>Très contente de ma commande</h3><p>Les deux paires de lunettes sont parfaites, solides et très belles, exactement comme sur le site.</p><footer><span class="tp-av" style="background:#DDE3E8;color:#191919">C</span><span><strong>Collin</strong> · BE<br>18 août 2026</span></footer></article>
         <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>je trouve le design au top elles ont…</h3><p>je trouve le design au top elles ont l&#x27;air solides. j&#x27;en ai commandé 5 au total. e viva Moretti!</p><footer><span class="tp-av" style="background:#E8E6FB;color:#191919">MJ</span><span><strong>moschietto jerome</strong> · FR<br>10 sept. 2026</span></footer></article>
         <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>L&#x27;Italie vous habille</h3><p>Produits de qualité dans le parfait style italien tout à fait conformes à la commande.</p><footer><span class="tp-av" style="background:#FBE5D6;color:#191919">DL</span><span><strong>Daniel Le Goff</strong> · FR<br>28 août 2026</span></footer></article>
@@ -467,16 +496,15 @@ p,h1,h2,h3,li,figcaption,blockquote,.it strong,.tp-card h3,.urgent p,.opt .txt{o
   </section>
   <section class="offer-box narrow">
     <div class="offer-card">
-      <div class="label">Offre en cours</div>
-      <a class="offer-big" href="https://marcomoretti.com/collections/2025-collection/products/lunettes-riviera-lunettes-transparentes-a-verres-bleus-degrades" target="_blank" rel="noopener">Découvrir la Riviera</a>
+      <div class="offer-flag">Offre en cours</div>
       <p class="offer-sub">1 paire achetée, 1 paire offerte</p>
+      <a class="offer-btn" href="https://marcomoretti.com/collections/2025-collection/products/lunettes-riviera-lunettes-transparentes-a-verres-bleus-degrades" target="_blank" rel="noopener">Découvrir la Riviera</a>
     </div>
   </section>
   <figure class="store bleed">
     <img class="warehouse" src="lp-assets/entrepot.jpg" width="720" height="1287" decoding="async" alt="Boîte Marco Moretti tenue à la main dans l’entrepôt" style="background:#E9E6E1 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAEKADAAQAAAABAAAAHAAAAAD/wAARCAAcABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9sAQwAGBgYGBgYKBgYKDgoKCg4SDg4ODhIXEhISEhIXHBcXFxcXFxwcHBwcHBwcIiIiIiIiJycnJycsLCwsLCwsLCws/9sAQwEHBwcLCgsTCgoTLh8aHy4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4u/90ABAAB/9oADAMBAAIRAxEAPwDPOk2u17mwdUhuXw6R/wAEiuwRhjoChwR9KlvFiinZnl83Z5agF8LgYAz68AVm362Gh2BSxAjm89lJJOWEbMFA9cADJ+lULC/S81E28IZmeVZRn5sKv+z0wvpWTV2a3sf/0OAtfI8S28emxSsslnKczYyHSQnpnoTjv6V2z2Gn+FdQY2KbP3eBISWfdjuT6msXwrbQ2vhbT7iFcSXVxM8jdyUO1fwAH6mtzXZXkZ2fn5SfyFc9TRtI3i72bP/Z) center/cover no-repeat">
     <div class="urgent" role="status"><span class="dot" aria-hidden="true"></span><div><span class="label">En ce moment</span><p>Une Riviera est vendue toutes les 15 secondes.</p></div></div>
   </figure>
-  <p class="tp-mini"><span class="tp-stars s44"><i></i><i></i><i></i><i></i><i></i></span> <strong>4,5 sur 5</strong> sur <span class="tp-brand"><b>★</b> Trustpilot</span></p>
 </main>
 
 <footer>
