@@ -307,6 +307,32 @@ p,h1,h2,h3,li,figcaption,blockquote,.it strong,.tp-card h3,.urgent p,.opt .txt{o
 .tp-mini strong{color:var(--ink);font-weight:500}
 .tp-mini .tp-stars i{width:16px;height:16px}
 .tp-mini .tp-stars i::after{font-size:11px}
+
+/* ---- zone de securite sur toute la page ---- */
+.narrow{padding-left:clamp(22px,6vw,28px);padding-right:clamp(22px,6vw,28px)}
+.about,.cta-mid,.offer-box{padding-top:56px;padding-bottom:0}
+.tp-title{padding-top:56px}
+.compare-head{padding-top:48px}
+.compare-head .label{color:var(--grey)}
+.compare-head h2,.tp-title h2{font-family:var(--didone);font-weight:400;font-size:clamp(28px,7.5vw,44px);line-height:1.05;margin:8px 0 18px}
+.tp-title .label{color:var(--grey)}
+/* sondage : question au-dessus des options */
+.poll-q{font-family:var(--italic);font-style:italic;font-size:20px;line-height:1.25;margin:0 0 4px}
+.poll-hint{margin:0 0 14px;font-size:13px;color:var(--grey)}
+.poll-head{margin-bottom:12px}
+@media (max-width:600px){
+  .vote h2{font-size:clamp(24px,6.4vw,34px)}
+  .poll{padding:18px 16px 16px}
+  .poll-q{font-size:19px}
+}
+/* offre encadree */
+.offer-card{border:1px solid var(--ink);padding:26px 20px 22px;text-align:center}
+.offer-card .label{color:var(--grey)}
+.offer-big{display:block;font-family:var(--didone);font-weight:400;font-size:clamp(32px,8.5vw,52px);line-height:1.05;color:var(--ink);text-decoration:none;margin:12px 0 10px}
+.offer-big:hover{color:var(--glacier)}
+.offer-sub{font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--grey)}
+.tp-mini{margin:14px auto 46px;padding:0 24px}
+.store{margin-top:34px}
 </style>
 </head>
 <body style="margin:0">
@@ -376,27 +402,6 @@ p,h1,h2,h3,li,figcaption,blockquote,.it strong,.tp-card h3,.urgent p,.opt .txt{o
       </div>
     </div>
   </section>
-  <section class="tp">
-    <div class="narrow tp-title"><div class="label">Les clients</div><h2>Voici ce que pensent les clients</h2></div>
-    <div class="tp-head">
-      <strong>Excellent</strong>
-      <span class="tp-stars s44" aria-label="4,5 étoiles sur 5"><i></i><i></i><i></i><i></i><i></i></span>
-      <span>4,5 sur 5 · 2 800+ avis sur</span>
-      <span class="tp-brand"><b>★</b> Trustpilot</span>
-    </div>
-    <div class="tp-viewport" id="tp">
-      <div class="tp-track">
-        <!-- Avis Trustpilot réels fournis par Ruben (15/09/2026) -->
-        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>Très belles lunettes</h3><p>Très belles lunettes, au design parfait. J’ai reçu beaucoup de compliments à leur sujet.</p><footer><span class="tp-av" style="background:#7BA148;color:#FFFFFF">AF</span><span><strong>Alain Fondanaux</strong> · FR<br>10 sept. 2026</span></footer></article>
-        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>Très contente de ma commande</h3><p>Les deux paires de lunettes sont parfaites, solides et très belles, exactement comme sur le site.</p><footer><span class="tp-av" style="background:#DDE3E8;color:#191919">C</span><span><strong>Collin</strong> · BE<br>18 août 2026</span></footer></article>
-        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>je trouve le design au top elles ont…</h3><p>je trouve le design au top elles ont l&#x27;air solides. j&#x27;en ai commandé 5 au total. e viva Moretti!</p><footer><span class="tp-av" style="background:#E8E6FB;color:#191919">MJ</span><span><strong>moschietto jerome</strong> · FR<br>10 sept. 2026</span></footer></article>
-        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>L&#x27;Italie vous habille</h3><p>Produits de qualité dans le parfait style italien tout à fait conformes à la commande.</p><footer><span class="tp-av" style="background:#FBE5D6;color:#191919">DL</span><span><strong>Daniel Le Goff</strong> · FR<br>28 août 2026</span></footer></article>
-        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>Lunettes au top 👍</h3><p>Qualité et prix imbattable!!! Je ne porte que ça depuis mon achat et je les recommande à 100 %</p><footer><span class="tp-av" style="background:#DCD6CF;color:#191919">MD</span><span><strong>Momo Dion</strong> · FR<br>8 août 2026</span></footer></article>
-        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>Je remercie l&#x27;équipe Marco Moretti pour…</h3><p>Des lunettes de qualité, la classe à l&#x27;italienne. Continuez comme vous êtes , MERCI 💐.</p><footer><span class="tp-av" style="background:#E8E6FB;color:#191919">EL</span><span><strong>Elyne</strong> · BE<br>12 sept. 2026</span></footer></article>
-        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>Des lunettes magnifiques pas chères de…</h3><p>Des lunettes magnifiques pas chères de très bonne qualité et avec des offres et des prix attractifs</p><footer><span class="tp-av" style="background:#F6D6E4;color:#191919">PB</span><span><strong>Peio Ben</strong> · FR<br>24 août 2026</span></footer></article>
-      </div>
-    </div>
-  </section>
   <section class="top5">
     <div class="narrow">
       <div class="label">Le classement</div>
@@ -439,6 +444,27 @@ p,h1,h2,h3,li,figcaption,blockquote,.it strong,.tp-card h3,.urgent p,.opt .txt{o
       <div><span class="label">Matière</span><p>Acétate, charnières japonaises</p></div>
     </div>
   </section>
+  <section class="tp">
+    <div class="narrow tp-title"><div class="label">Les clients</div><h2>Voici ce que pensent les clients</h2></div>
+    <div class="tp-head">
+      <strong>Excellent</strong>
+      <span class="tp-stars s44" aria-label="4,5 étoiles sur 5"><i></i><i></i><i></i><i></i><i></i></span>
+      <span>4,5 sur 5 · 2 800+ avis sur</span>
+      <span class="tp-brand"><b>★</b> Trustpilot</span>
+    </div>
+    <div class="tp-viewport" id="tp">
+      <div class="tp-track">
+        <!-- Avis Trustpilot réels fournis par Ruben (15/09/2026) -->
+        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>Très belles lunettes</h3><p>Très belles lunettes, au design parfait. J’ai reçu beaucoup de compliments à leur sujet.</p><footer><span class="tp-av" style="background:#7BA148;color:#FFFFFF">AF</span><span><strong>Alain Fondanaux</strong> · FR<br>10 sept. 2026</span></footer></article>
+        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>Très contente de ma commande</h3><p>Les deux paires de lunettes sont parfaites, solides et très belles, exactement comme sur le site.</p><footer><span class="tp-av" style="background:#DDE3E8;color:#191919">C</span><span><strong>Collin</strong> · BE<br>18 août 2026</span></footer></article>
+        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>je trouve le design au top elles ont…</h3><p>je trouve le design au top elles ont l&#x27;air solides. j&#x27;en ai commandé 5 au total. e viva Moretti!</p><footer><span class="tp-av" style="background:#E8E6FB;color:#191919">MJ</span><span><strong>moschietto jerome</strong> · FR<br>10 sept. 2026</span></footer></article>
+        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>L&#x27;Italie vous habille</h3><p>Produits de qualité dans le parfait style italien tout à fait conformes à la commande.</p><footer><span class="tp-av" style="background:#FBE5D6;color:#191919">DL</span><span><strong>Daniel Le Goff</strong> · FR<br>28 août 2026</span></footer></article>
+        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>Lunettes au top 👍</h3><p>Qualité et prix imbattable!!! Je ne porte que ça depuis mon achat et je les recommande à 100 %</p><footer><span class="tp-av" style="background:#DCD6CF;color:#191919">MD</span><span><strong>Momo Dion</strong> · FR<br>8 août 2026</span></footer></article>
+        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>Je remercie l&#x27;équipe Marco Moretti pour…</h3><p>Des lunettes de qualité, la classe à l&#x27;italienne. Continuez comme vous êtes , MERCI 💐.</p><footer><span class="tp-av" style="background:#E8E6FB;color:#191919">EL</span><span><strong>Elyne</strong> · BE<br>12 sept. 2026</span></footer></article>
+        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>Des lunettes magnifiques pas chères de…</h3><p>Des lunettes magnifiques pas chères de très bonne qualité et avec des offres et des prix attractifs</p><footer><span class="tp-av" style="background:#F6D6E4;color:#191919">PB</span><span><strong>Peio Ben</strong> · FR<br>24 août 2026</span></footer></article>
+      </div>
+    </div>
+  </section>
   <section class="offer-box narrow">
     <div class="offer-card">
       <div class="label">Offre en cours</div>
@@ -451,11 +477,6 @@ p,h1,h2,h3,li,figcaption,blockquote,.it strong,.tp-card h3,.urgent p,.opt .txt{o
     <div class="urgent" role="status"><span class="dot" aria-hidden="true"></span><div><span class="label">En ce moment</span><p>Une Riviera est vendue toutes les 15 secondes.</p></div></div>
   </figure>
   <p class="tp-mini"><span class="tp-stars s44"><i></i><i></i><i></i><i></i><i></i></span> <strong>4,5 sur 5</strong> sur <span class="tp-brand"><b>★</b> Trustpilot</span></p>
-  <section class="offer narrow">
-    <div class="label">Offre en cours</div>
-    <h2>Une paire achetée, une paire offerte</h2>
-    <a class="btn" href="https://marcomoretti.com/collections/2025-collection/products/lunettes-riviera-lunettes-transparentes-a-verres-bleus-degrades" target="_blank" rel="noopener">Découvrir la Riviera</a>
-  </section>
 </main>
 
 <footer>
