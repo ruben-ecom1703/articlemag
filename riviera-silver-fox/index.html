@@ -375,6 +375,22 @@ footer{padding-bottom:34px}
 .mid-cta{margin:32px auto 30px;padding:0 24px}
 .about .soft-cta{margin:24px 0 10px}
 .pair .soft-cta{margin:22px 0 0}
+
+/* ---- CTA discrets : identiques partout, mobile d'abord ---- */
+.soft-cta{display:block;text-align:center;margin:26px auto;padding:0 24px}
+.soft-cta a{display:inline-flex;align-items:center;justify-content:center;gap:8px;max-width:100%;
+  font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--ink);
+  padding:8px 2px 7px;line-height:1.2}
+.soft-cta a:hover{color:var(--glacier);border-color:var(--glacier)}
+.soft-cta .arrow{font-size:15px;line-height:1;position:relative;top:-1px;transition:transform .18s ease}
+.soft-cta a:hover .arrow{transform:translateX(3px)}
+.mid-cta,.about .soft-cta,.pair .soft-cta{margin-top:26px;margin-bottom:26px}
+@media (min-width:760px){
+  .soft-cta{margin:34px auto}
+  .soft-cta a{font-size:14px;padding:9px 4px 8px}
+  .mid-cta,.about .soft-cta,.pair .soft-cta{margin-top:34px;margin-bottom:34px}
+}
 </style>
 </head>
 <body style="margin:0">
@@ -398,7 +414,7 @@ footer{padding-bottom:34px}
       <div class="label">Marco Moretti · Milano</div>
     </div>
     <div class="bleed"><img class="portrait" src="lp-assets/portrait-riviera.jpg" decoding="async" alt="Homme poivre et sel portant la Riviera" style="background:#E9E6E1 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QCARXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAAAAAABIAAAAAQAAAEgAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAABCgAwAEAAAAAQAAABwAAAAA/8AAEQgAHAAQAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/bAEMABgYGBgYGCgYGCg4KCgoOEg4ODg4SFxISEhISFxwXFxcXFxccHBwcHBwcHCIiIiIiIicnJycnLCwsLCwsLCwsLP/bAEMBBwcHCwoLEwoKEy4fGh8uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLv/dAAQAAf/aAAwDAQACEQMRAD8A1viLc2zSpocSs8t0Ypn2H7gQFR/31/Su1+Hp/s3TZdI1A+UYj5sYcgHY3B/X+dcz4/0uOO6h1lXwZUELhThsoflI/PFc5LfS2d7ps19uX7RBIr/MTkjbj+X0rkp1OVpo6qtKLhfqf//Q8f1bxprutakuqXkoJUkpF/yzUHsB9KzLzV7/AFCRbi6lLMgCr6KPas3UIktr2W2i+4jYGeeKjJxbO3fBpxjHSSRcpS1i2f/Z) center/cover no-repeat"></div>
-    <p class="soft-cta"><a href="https://www.marcomoretti.store/products/lunettes-riviera-lunettes-transparentes-a-verres-bleus-degrades" target="_blank" rel="noopener">Découvrir la Riviera <span aria-hidden="true">&#8594;</span></a></p>
+    <p class="soft-cta"><a href="https://www.marcomoretti.store/products/lunettes-riviera-lunettes-transparentes-a-verres-bleus-degrades" target="_blank" rel="noopener">Découvrez la Riviera<span class="arrow" aria-hidden="true">&#8594;</span></a></p>
     <div class="specs">
       <div><div class="label">Bleu glacier</div><p>Il s'accorde parfaitement aux cheveux et à la barbe grise.</p></div>
       <div><div class="label">Verre dégradé</div><p>Il laisse passer le regard et le rend irrésistible.</p></div>
@@ -446,7 +462,7 @@ footer{padding-bottom:34px}
       </div>
     </div>
   </section>
-  <p class="soft-cta mid-cta"><a href="https://www.marcomoretti.store/products/lunettes-riviera-lunettes-transparentes-a-verres-bleus-degrades" target="_blank" rel="noopener">Découvrir la Riviera <span aria-hidden="true">&#8594;</span></a></p>
+  <p class="soft-cta mid-cta"><a href="https://www.marcomoretti.store/products/lunettes-riviera-lunettes-transparentes-a-verres-bleus-degrades" target="_blank" rel="noopener">Découvrez la Riviera<span class="arrow" aria-hidden="true">&#8594;</span></a></p>
   <section class="top5">
     <div class="narrow">
       <div class="label">Le classement</div>
@@ -488,10 +504,10 @@ footer{padding-bottom:34px}
       <div><span class="label">Origine</span><p>Pensée et dessinée en Italie</p></div>
       <div><span class="label">Matière</span><p>Acétate, charnières japonaises</p></div>
     </div>
-    <p class="soft-cta"><a href="https://www.marcomoretti.store/products/lunettes-riviera-lunettes-transparentes-a-verres-bleus-degrades" target="_blank" rel="noopener">Découvrir la Riviera <span aria-hidden="true">&#8594;</span></a></p>
+    <p class="soft-cta"><a href="https://www.marcomoretti.store/products/lunettes-riviera-lunettes-transparentes-a-verres-bleus-degrades" target="_blank" rel="noopener">Découvrez la Riviera<span class="arrow" aria-hidden="true">&#8594;</span></a></p>
   </section>
   <section class="tp">
-    <div class="narrow tp-title"><div class="label">Les clients</div><h2>Voici ce que pensent les clients</h2></div>
+    <div class="narrow tp-title"><div class="label">Les clients Marco Moretti</div><h2>Voici ce que pensent les clients de chez Marco Moretti</h2></div>
     <div class="tp-head">
       <strong>Excellent</strong>
       <span class="tp-stars s44" aria-label="4,5 étoiles sur 5"><i></i><i></i><i></i><i></i><i></i></span>
