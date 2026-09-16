@@ -296,7 +296,7 @@ p,h1,h2,h3,li,figcaption,blockquote,.it strong,.tp-card h3,.urgent p,.opt .txt{o
 .about{padding:60px 0 0}
 .about h2{font-family:var(--didone);font-weight:400;font-size:clamp(30px,8vw,46px);line-height:1.05;margin:8px 0 16px}
 .about p{margin-bottom:12px;font-weight:300}
-.about-facts{display:grid;gap:14px;margin-top:22px;padding-top:18px;border-top:1px solid var(--hair)}
+.about-facts{display:grid;gap:12px;margin-top:16px;padding-top:14px;border-top:1px solid var(--hair)}
 @media (min-width:700px){.about-facts{grid-template-columns:repeat(3,1fr);gap:24px}}
 .about-facts .label{color:var(--grey);display:block;margin-bottom:2px}
 .about-facts p{margin:0;font-family:var(--italic);font-style:italic;font-size:17px}
@@ -340,7 +340,7 @@ p,h1,h2,h3,li,figcaption,blockquote,.it strong,.tp-card h3,.urgent p,.opt .txt{o
 .offer-card .offer-sub{margin:14px 0 16px;font-family:var(--italic);font-style:italic;font-size:20px;letter-spacing:0;text-transform:none;color:var(--ink)}
 .offer-btn{display:block;background:#00B67A;color:#FFFFFF;text-decoration:none;font-family:var(--sans);font-weight:600;font-size:15px;letter-spacing:.12em;text-transform:uppercase;padding:20px 18px 20px 20px}
 .offer-btn:hover{background:#00A06B}
-.about .soft-cta{margin-top:22px}
+.about .soft-cta{margin-top:14px}
 /* ---- pied de page ---- */
 .foot-links{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 18px;margin:10px 0 12px}
 .foot-links a{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--hair);padding-bottom:3px}
@@ -349,6 +349,13 @@ p,h1,h2,h3,li,figcaption,blockquote,.it strong,.tp-card h3,.urgent p,.opt .txt{o
 .foot-legal a{color:var(--grey);text-decoration:none}
 .foot-legal a:hover{text-decoration:underline}
 footer{padding-bottom:34px}
+
+/* ---- avis compacts ---- */
+.tp-card{width:225px;padding:12px 14px 10px}
+.tp-card h3{margin:8px 0 3px;font-size:13.5px}
+.tp-card p{font-size:12.5px;line-height:1.4;-webkit-line-clamp:2;min-height:35px}
+.tp-card footer{padding-top:8px;font-size:11px}
+.tp-av{width:22px;height:22px;font-size:9.5px}
 </style>
 </head>
 <body style="margin:0">
@@ -385,7 +392,7 @@ footer{padding-bottom:34px}
     <div class="ba" id="ba">
       <img class="layer before" src="lp-assets/avant.jpg" alt="Homme poivre et sel en terrasse avec des lunettes noires épaisses" draggable="false">
       <img class="layer after" src="lp-assets/apres-riviera.jpg" alt="Le même homme avec la Riviera, monture transparente et verres bleu glacier" draggable="false">
-      <span class="mark l label">Avant</span>
+      <span class="mark l label">Ray-Ban</span>
       <span class="mark r label">Riviera</span>
       <div class="line"><div class="knob" aria-hidden="true">‹ ›</div></div>
       <input type="range" min="0" max="100" value="50" aria-label="Glisser pour comparer avant et après">
@@ -484,31 +491,6 @@ footer{padding-bottom:34px}
     <a href="https://marcomoretti.com" target="_blank" rel="noopener">Mentions légales</a> ·
     <a href="https://marcomoretti.com" target="_blank" rel="noopener">Livraison et retours</a>
   </p>
-</footer></article>
-        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>Très contente de ma commande</h3><p>Les deux paires de lunettes sont parfaites, solides et très belles, exactement comme sur le site.</p><footer><span class="tp-av" style="background:#DDE3E8;color:#191919">C</span><span><strong>Collin</strong> · BE<br>18 août 2026</span></footer></article>
-        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>je trouve le design au top elles ont…</h3><p>je trouve le design au top elles ont l&#x27;air solides. j&#x27;en ai commandé 5 au total. e viva Moretti!</p><footer><span class="tp-av" style="background:#E8E6FB;color:#191919">MJ</span><span><strong>moschietto jerome</strong> · FR<br>10 sept. 2026</span></footer></article>
-        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>L&#x27;Italie vous habille</h3><p>Produits de qualité dans le parfait style italien tout à fait conformes à la commande.</p><footer><span class="tp-av" style="background:#FBE5D6;color:#191919">DL</span><span><strong>Daniel Le Goff</strong> · FR<br>28 août 2026</span></footer></article>
-        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>Lunettes au top 👍</h3><p>Qualité et prix imbattable!!! Je ne porte que ça depuis mon achat et je les recommande à 100 %</p><footer><span class="tp-av" style="background:#DCD6CF;color:#191919">MD</span><span><strong>Momo Dion</strong> · FR<br>8 août 2026</span></footer></article>
-        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>Je remercie l&#x27;équipe Marco Moretti pour…</h3><p>Des lunettes de qualité, la classe à l&#x27;italienne. Continuez comme vous êtes , MERCI 💐.</p><footer><span class="tp-av" style="background:#E8E6FB;color:#191919">EL</span><span><strong>Elyne</strong> · BE<br>12 sept. 2026</span></footer></article>
-        <article class="tp-card"><span class="tp-stars"><i></i><i></i><i></i><i></i><i></i></span><h3>Des lunettes magnifiques pas chères de…</h3><p>Des lunettes magnifiques pas chères de très bonne qualité et avec des offres et des prix attractifs</p><footer><span class="tp-av" style="background:#F6D6E4;color:#191919">PB</span><span><strong>Peio Ben</strong> · FR<br>24 août 2026</span></footer></article>
-      </div>
-    </div>
-  </section>
-  <section class="offer-box narrow">
-    <div class="offer-card">
-      <div class="offer-flag">Offre en cours</div>
-      <p class="offer-sub">1 paire achetée, 1 paire offerte</p>
-      <a class="offer-btn" href="https://marcomoretti.com/collections/2025-collection/products/lunettes-riviera-lunettes-transparentes-a-verres-bleus-degrades" target="_blank" rel="noopener">Découvrir la Riviera</a>
-    </div>
-  </section>
-  <figure class="store bleed">
-    <img class="warehouse" src="lp-assets/entrepot.jpg" width="720" height="1287" decoding="async" alt="Boîte Marco Moretti tenue à la main dans l’entrepôt" style="background:#E9E6E1 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAEKADAAQAAAABAAAAHAAAAAD/wAARCAAcABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9sAQwAGBgYGBgYKBgYKDgoKCg4SDg4ODhIXEhISEhIXHBcXFxcXFxwcHBwcHBwcIiIiIiIiJycnJycsLCwsLCwsLCws/9sAQwEHBwcLCgsTCgoTLh8aHy4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4u/90ABAAB/9oADAMBAAIRAxEAPwDPOk2u17mwdUhuXw6R/wAEiuwRhjoChwR9KlvFiinZnl83Z5agF8LgYAz68AVm362Gh2BSxAjm89lJJOWEbMFA9cADJ+lULC/S81E28IZmeVZRn5sKv+z0wvpWTV2a3sf/0OAtfI8S28emxSsslnKczYyHSQnpnoTjv6V2z2Gn+FdQY2KbP3eBISWfdjuT6msXwrbQ2vhbT7iFcSXVxM8jdyUO1fwAH6mtzXZXkZ2fn5SfyFc9TRtI3i72bP/Z) center/cover no-repeat">
-    <div class="urgent" role="status"><span class="dot" aria-hidden="true"></span><div><span class="label">En ce moment</span><p>Une Riviera est vendue toutes les 15 secondes.</p></div></div>
-  </figure>
-</main>
-
-<footer>
-  <div class="name">THE <b>50</b> CLUB</div>
 </footer>
 
 <script>
