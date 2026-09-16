@@ -1,5 +1,4 @@
 plugins = []
-redirects = []
 
 [functions]
 
@@ -28,3 +27,39 @@ for = "/*"
 
 [headers.values]
 X-Robots-Tag = "all"
+
+[[redirects]]
+from = "/riviera-silver-fox/*"
+to = "/fr/"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/the-detail-after-50/*"
+to = "/us/"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/"
+to = "/fr/"
+status = 302.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
