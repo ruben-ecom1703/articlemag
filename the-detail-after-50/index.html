@@ -599,9 +599,9 @@ footer{padding-bottom:34px}
       total+=pas; ajoutes+=pas;
       el.textContent=fmt(total);
       el.classList.add('bump'); setTimeout(function(){el.classList.remove('bump')},420);
-      setTimeout(tick, 3200+Math.random()*5200);
+      setTimeout(tick, 2600+Math.random()*3600);
     }
-    setTimeout(tick, 2500+Math.random()*2500);
+    setTimeout(tick, 1800+Math.random()*2200);
     window.__voteTotal=function(){return total};
   })();
   var poll=document.getElementById('poll'),count=document.getElementById('count'),phint=document.getElementById('phint'),done=false;
