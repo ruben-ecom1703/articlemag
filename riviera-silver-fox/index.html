@@ -290,6 +290,23 @@ p,h1,h2,h3,li,figcaption,blockquote,.it strong,.tp-card h3,.urgent p,.opt .txt{o
   .top5 li{grid-template-columns:24px 72px 1fr;gap:10px}
   .thumb{width:72px;height:72px}
 }
+
+/* ---- nouvelles sections ---- */
+.pair{padding:34px 0 0}
+.about{padding:60px 0 0}
+.about h2{font-family:var(--didone);font-weight:400;font-size:clamp(30px,8vw,46px);line-height:1.05;margin:8px 0 16px}
+.about p{margin-bottom:12px;font-weight:300}
+.about-facts{display:grid;gap:14px;margin-top:22px;padding-top:18px;border-top:1px solid var(--hair)}
+@media (min-width:700px){.about-facts{grid-template-columns:repeat(3,1fr);gap:24px}}
+.about-facts .label{color:var(--grey);display:block;margin-bottom:2px}
+.about-facts p{margin:0;font-family:var(--italic);font-style:italic;font-size:17px}
+.cta-mid{padding:44px 0 8px}
+.cta-mid .label{color:var(--grey)}
+.cta-line{font-family:var(--didone);font-size:clamp(26px,7vw,40px);line-height:1.05;margin:10px 0 20px}
+.tp-mini{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin:14px auto 0;font-size:14px;color:var(--grey)}
+.tp-mini strong{color:var(--ink);font-weight:500}
+.tp-mini .tp-stars i{width:16px;height:16px}
+.tp-mini .tp-stars i::after{font-size:11px}
 </style>
 </head>
 <body style="margin:0">
@@ -307,23 +324,6 @@ p,h1,h2,h3,li,figcaption,blockquote,.it strong,.tp-card h3,.urgent p,.opt .txt{o
     <p class="deck">Le gris n'est pas le problème. C'est ce que vous posez devant.</p>
     <div class="by label">Par la rédaction</div>
   </section>
-
-  <figure class="bleed ba-fig">
-    <div class="ba" id="ba">
-      <img class="layer before" src="lp-assets/avant.jpg" alt="Homme poivre et sel en terrasse avec des lunettes noires épaisses" draggable="false">
-      <img class="layer after" src="lp-assets/apres-riviera.jpg" alt="Le même homme avec la Riviera, monture transparente et verres bleu glacier" draggable="false">
-      <span class="mark l label">Avant</span>
-      <span class="mark r label">Riviera</span>
-      <div class="line"><div class="knob" aria-hidden="true">‹ ›</div></div>
-      <input type="range" min="0" max="100" value="50" aria-label="Glisser pour comparer avant et après">
-    </div>
-    <figcaption class="cap">Même homme, même lumière. Seule la paire change.</figcaption>
-  </figure>
-
-  <section class="intro narrow">
-    <p>La plupart des lunettes de soleil sont trop sombres, trop massives. Sur un visage poivre et sel, elles écrasent tout et cachent le regard.</p>
-  </section>
-
   <section class="pair">
     <div class="narrow">
       <div class="label">La paire</div>
@@ -338,7 +338,20 @@ p,h1,h2,h3,li,figcaption,blockquote,.it strong,.tp-card h3,.urgent p,.opt .txt{o
       <div><div class="label">Monture fine</div><p>Transparente, légère, dessinée en Italie.</p></div>
     </div>
   </section>
-
+  <figure class="bleed ba-fig">
+    <div class="ba" id="ba">
+      <img class="layer before" src="lp-assets/avant.jpg" alt="Homme poivre et sel en terrasse avec des lunettes noires épaisses" draggable="false">
+      <img class="layer after" src="lp-assets/apres-riviera.jpg" alt="Le même homme avec la Riviera, monture transparente et verres bleu glacier" draggable="false">
+      <span class="mark l label">Avant</span>
+      <span class="mark r label">Riviera</span>
+      <div class="line"><div class="knob" aria-hidden="true">‹ ›</div></div>
+      <input type="range" min="0" max="100" value="50" aria-label="Glisser pour comparer avant et après">
+    </div>
+    <figcaption class="cap">Même homme, même lumière. Seule la paire change.</figcaption>
+  </figure>
+  <section class="intro narrow">
+    <p>Le même homme, à une heure d'intervalle. Les montures sombres et massives écrasent un visage poivre et sel et cachent le regard. Le dégradé bleu glacier fait l'inverse.</p>
+  </section>
   <section class="vote">
     <div class="narrow">
       <div class="label">Le vote des lecteurs</div>
@@ -361,7 +374,6 @@ p,h1,h2,h3,li,figcaption,blockquote,.it strong,.tp-card h3,.urgent p,.opt .txt{o
       </div>
     </div>
   </section>
-
   <section class="tp">
     <div class="tp-head">
       <strong>Excellent</strong>
@@ -382,12 +394,6 @@ p,h1,h2,h3,li,figcaption,blockquote,.it strong,.tp-card h3,.urgent p,.opt .txt{o
       </div>
     </div>
   </section>
-
-  <figure class="store bleed">
-    <img class="warehouse" src="lp-assets/entrepot.jpg" width="720" height="1287" decoding="async" alt="Boîte Marco Moretti tenue à la main dans l’entrepôt" style="background:#E9E6E1 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAEKADAAQAAAABAAAAHAAAAAD/wAARCAAcABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9sAQwAGBgYGBgYKBgYKDgoKCg4SDg4ODhIXEhISEhIXHBcXFxcXFxwcHBwcHBwcIiIiIiIiJycnJycsLCwsLCwsLCws/9sAQwEHBwcLCgsTCgoTLh8aHy4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4u/90ABAAB/9oADAMBAAIRAxEAPwDPOk2u17mwdUhuXw6R/wAEiuwRhjoChwR9KlvFiinZnl83Z5agF8LgYAz68AVm362Gh2BSxAjm89lJJOWEbMFA9cADJ+lULC/S81E28IZmeVZRn5sKv+z0wvpWTV2a3sf/0OAtfI8S28emxSsslnKczYyHSQnpnoTjv6V2z2Gn+FdQY2KbP3eBISWfdjuT6msXwrbQ2vhbT7iFcSXVxM8jdyUO1fwAH6mtzXZXkZ2fn5SfyFc9TRtI3i72bP/Z) center/cover no-repeat">
-    <div class="urgent" role="status"><span class="dot" aria-hidden="true"></span><div><span class="label">En ce moment</span><p>Une Riviera est vendue toutes les 15 secondes.</p></div></div>
-  </figure>
-
   <section class="top5">
     <div class="narrow">
       <div class="label">Le classement</div>
@@ -421,7 +427,27 @@ p,h1,h2,h3,li,figcaption,blockquote,.it strong,.tp-card h3,.urgent p,.opt .txt{o
       </li>
     </ol>
   </section>
-
+  <section class="about narrow">
+    <div class="label">À propos</div>
+    <h2>Qui vend la Riviera</h2>
+    <p>Marco Moretti est une maison italienne. Les montures sont dessinées à Milan, en acétate, avec des charnières japonaises. Les verres sont certifiés UV400 : ils bloquent 100 % des UVA et UVB.</p>
+    <p>Plus de 23 000 clients ont déjà commandé une paire.</p>
+    <div class="about-facts">
+      <div><span class="label">Origine</span><p>Dessinée en Italie</p></div>
+      <div><span class="label">Matière</span><p>Acétate, charnières japonaises</p></div>
+      <div><span class="label">Verres</span><p>Dégradé, UV400 certifié</p></div>
+    </div>
+  </section>
+  <section class="cta-mid narrow">
+    <div class="label">Offre en cours</div>
+    <p class="cta-line">Une paire achetée, une paire offerte.</p>
+    <a class="btn" href="https://marcomoretti.com/collections/2025-collection/products/lunettes-riviera-lunettes-transparentes-a-verres-bleus-degrades" target="_blank" rel="noopener">Découvrir la Riviera</a>
+  </section>
+  <figure class="store bleed">
+    <img class="warehouse" src="lp-assets/entrepot.jpg" width="720" height="1287" decoding="async" alt="Boîte Marco Moretti tenue à la main dans l’entrepôt" style="background:#E9E6E1 url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAEKADAAQAAAABAAAAHAAAAAD/wAARCAAcABADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9sAQwAGBgYGBgYKBgYKDgoKCg4SDg4ODhIXEhISEhIXHBcXFxcXFxwcHBwcHBwcIiIiIiIiJycnJycsLCwsLCwsLCws/9sAQwEHBwcLCgsTCgoTLh8aHy4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4u/90ABAAB/9oADAMBAAIRAxEAPwDPOk2u17mwdUhuXw6R/wAEiuwRhjoChwR9KlvFiinZnl83Z5agF8LgYAz68AVm362Gh2BSxAjm89lJJOWEbMFA9cADJ+lULC/S81E28IZmeVZRn5sKv+z0wvpWTV2a3sf/0OAtfI8S28emxSsslnKczYyHSQnpnoTjv6V2z2Gn+FdQY2KbP3eBISWfdjuT6msXwrbQ2vhbT7iFcSXVxM8jdyUO1fwAH6mtzXZXkZ2fn5SfyFc9TRtI3i72bP/Z) center/cover no-repeat">
+    <div class="urgent" role="status"><span class="dot" aria-hidden="true"></span><div><span class="label">En ce moment</span><p>Une Riviera est vendue toutes les 15 secondes.</p></div></div>
+  </figure>
+  <p class="tp-mini"><span class="tp-stars s44"><i></i><i></i><i></i><i></i><i></i></span> <strong>4,5 sur 5</strong> sur <span class="tp-brand"><b>★</b> Trustpilot</span></p>
   <section class="offer narrow">
     <div class="label">Offre en cours</div>
     <h2>Une paire achetée, une paire offerte</h2>
